@@ -1,32 +1,19 @@
-const body = document.querySelector("body");
-const modal = document.querySelector(".modal");
-const modalButton = document.querySelector(".modal-button");
-const closeButton = document.querySelector(".close-button");
-const scrollDown = document.querySelector(".scroll-down");
-let isOpened = false;
+var cta = document.querySelector(".cta");
+var check = 0;
 
-const openModal = () => {
-  modal.classList.add("is-open");
-  body.style.overflow = "hidden";
-};
-
-const closeModal = () => {
-  modal.classList.remove("is-open");
-  body.style.overflow = "initial";
-};
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight / 3 && !isOpened) {
-    isOpened = true;
-    scrollDown.style.display = "none";
-    openModal();
-  }
-});
-
-modalButton.addEventListener("click", openModal);
-closeButton.addEventListener("click", closeModal);
-
-document.onkeydown = evt => {
-  evt = evt || window.event;
-  evt.keyCode === 27 ? closeModal() : false;
-};
+cta.addEventListener('click', function(e){
+    var text = e.target.nextElementSibling;
+    var loginText = e.target.parentElement;
+    text.classList.toggle('show-hide');
+    loginText.classList.toggle('expand');
+    if(check == 0)
+    {
+        cta.innerHTML = "<i class=\"fas fa-chevron-up\"></i>";
+        check++;
+    }
+    else
+    {
+        cta.innerHTML = "<i class=\"fas fa-chevron-down\"></i>";
+        check = 0;
+    }
+})
