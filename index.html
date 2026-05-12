@@ -682,32 +682,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 	  <script src="login/js/welcome.js"></script>
-
-	  <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const username = localStorage.getItem("username");
-    const authButton = document.getElementById("authButton");
-
-    if (username) {
-        // kalau sudah login
-        authButton.innerText = "Logout";
-
-        // optional: kalau diklik logout
-        authButton.href = "#";
-        authButton.addEventListener("click", function () {
-            localStorage.removeItem("username");
-            location.reload();
-        });
-
-    } else {
-        // kalau belum login
-        authButton.innerText = "Login";
-        authButton.href = "login.html"; // atau index login kamu
-    }
-
-});
-</script>
     
   </body>
 </html>
