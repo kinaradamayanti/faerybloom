@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("userInfo").innerText = "Halo, " + user;
 
         document.getElementById("authArea").innerHTML = `
-            <a href="#" onclick="logout()" class="nav-link">Logout</a>
+            <a href="#" onclick="logout()" class="nav-link nav-cta">Logout</a>
         `;
     }
 
