@@ -7957,6 +7957,10 @@ h1, h2, h3, h4, h5,
 .room-img {
   height: 400px;
   margin-bottom: 2em; }
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
 
 .room-single h2 {
   font-size: 28px; }
